@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class array {
 
 	public static void main(String args[]) {
+		array ob=new array();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter size of the array:");
 		int len=sc.nextInt();
@@ -13,10 +14,10 @@ public class array {
 			array1[i] = sc.nextInt();
 		}
 		
-		array2 = distinctElements(array1,array2,len);
-		printArray(array2);
+		array2 = ob.distinctElements(array1,array2,len);
+		ob.printArray(array2);
 	}
-	private static int[] distinctElements(int array1[],int array2[],int len)
+	public int[] distinctElements(int array1[],int array2[],int len)
 	{
 		int count = 0;
 		for(int i=0;i<len;i++)
@@ -38,7 +39,7 @@ public class array {
 		}
 		return array2;
 	}
-	private static void printArray(int array2[])
+	public void printArray(int array2[])
 	{
 		System.out.println("New Array :");
 		for(int i=0;i<array2.length;i++) {
