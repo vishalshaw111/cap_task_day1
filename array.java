@@ -18,22 +18,22 @@ public class array {
 	}
 	private static int[] distinctElements(int array1[],int array2[],int len)
 	{
-		int in = 0;
+		int count = 0;
 		for(int i=0;i<len;i++)
 		{
-			boolean flag = false;
+			int flag = 0;
 			for(int j=0;j<i;j++)
 			{
 				if(array1[i] == array1[j])
 				{
-					flag=true;
+					flag=1;
 					break;
 				}
 			}
-			if(!flag)
+			if(flag==0)
 			{
-				array2[in] = array1[i];
-				in++;
+				array2[count] = array1[i];
+				count++;
 			}
 		}
 		return array2;
